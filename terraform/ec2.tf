@@ -53,3 +53,9 @@ resource "aws_key_pair" "k8s" {
   key_name   = "assignment2"
   public_key = file("${path.module}/assignment2.pub")
 }
+resource "aws_ecr_repository" "clo_835_week1" {
+  name = "assignment2_repo_app"
+}
+resource "aws_ecr_repository" "clo_835" {
+  name = "assignment2_repo_db"
+  }
