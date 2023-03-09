@@ -51,7 +51,7 @@ def home():
 
 @app.route("/about", methods=['GET','POST'])
 def about():
-    return render_template('about.html', color=color_codes[COLOR])
+    return render_template('about.html', color=color_codes[RED])
     
 @app.route("/addemp", methods=['POST'])
 def AddEmp():
