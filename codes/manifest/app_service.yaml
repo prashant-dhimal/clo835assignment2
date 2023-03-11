@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: app
   labels:
-   app: employees
+   app: webserver
 spec:
   selector:
-    app: employees
+    app: webserver
   type: NodePort
   ports:
     - port: 8080
