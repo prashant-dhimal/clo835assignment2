@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: mysql
   labels:
-    app: mysql
+    app: mysqlserver
 spec:
   ports:
   - name: mysql
@@ -11,4 +11,4 @@ spec:
     targetPort: 3306
     protocol: TCP
   selector:
-    app: mysql
+    app: mysqlserver
