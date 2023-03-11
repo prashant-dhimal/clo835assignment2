@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app: mysql
+    app: mysqlserver
   name: mysql
 spec:
   containers:
