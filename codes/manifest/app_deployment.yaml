@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app
   labels:
-    app: employees
+    app: webserver
 spec:
   replicas: 1
   selector:
