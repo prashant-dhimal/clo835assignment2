@@ -1,27 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
   name: mysql
   labels:
-    app: mysql
-  name: mysql
+    app: mysqlserver
 spec:
-  replicas: 1
+  ports:
+  - name: mysql
+    port: 3306
+    targetPort: 3306
+    protocol: TCP
   selector:
-    matchLabels:
-      app: mysql
-  template:
-    metadata:
-      labels:
-        app: mysql
-    spec:
-      containers:
-      - name: mysql
-        image: 293969756141.dkr.ecr.us-east-1.amazonaws.com/assignment2_repo_db:v2.0
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: "clo825_2"
-        ports:
-         - containerPort: 3306
-           protocol: TCP
-~                                
+    app: mysqlserver
